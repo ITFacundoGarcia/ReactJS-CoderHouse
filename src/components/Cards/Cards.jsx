@@ -1,8 +1,13 @@
 import React from 'react'
 import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
+import ItemCount from '../ItemCount/ItemCount'
 
 const Cards = () => {
+
+    const onAdd = (cant)=> {
+        console.log(cant)
+    }
+
     return (
         <div>
             <ul style={{display: "flex"}}>
@@ -16,7 +21,7 @@ const Cards = () => {
                                 Edad: 8 años<hr/>
                                 Volumen: 1000cm3<hr/>
                             </Card.Text>
-                            <Button variant="primary">Agregar al carrito</Button>
+                            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
                 </li>
@@ -30,7 +35,7 @@ const Cards = () => {
                                 Edad: 8 años<hr/>
                                 Volumen: 1000cm3<hr/>
                             </Card.Text>
-                            <Button variant="primary">Agregar al carrito</Button>
+                            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
                 </li>
@@ -44,7 +49,7 @@ const Cards = () => {
                                 Edad: 8 años<hr/>
                                 Volumen: 1000cm3<hr/>
                             </Card.Text>
-                            <Button variant="primary">Agregar al carrito</Button>
+                            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
                 </li>
@@ -58,7 +63,7 @@ const Cards = () => {
                                 Edad: 8 años<hr/>
                                 Volumen: 1000cm3<hr/>
                             </Card.Text>
-                            <Button variant="primary">Agregar al carrito</Button>
+                            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
                 </li>
@@ -72,7 +77,7 @@ const Cards = () => {
                                 Edad: 8 años<hr/>
                                 Volumen: 1000cm3<hr/>
                             </Card.Text>
-                            <Button variant="primary">Agregar al carrito</Button>
+                            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
                 </li>

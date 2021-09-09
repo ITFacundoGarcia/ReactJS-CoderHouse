@@ -6,7 +6,7 @@ import Cards from "./components/Cards/Cards"
 
 function App() {
   return (
-    <>
+  <>
   <NavBar/>
   <ItemListContainer saludo = {"Hola! Este es el espacio donde se encontrarán nuestros productos!"}/>
   <Cards/>
