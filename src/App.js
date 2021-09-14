@@ -9,7 +9,6 @@ function App() {
   <>
   <NavBar/>
   <ItemListContainer saludo = {"Hola! Este es el espacio donde se encontrarán nuestros productos!"}/>
-  <Cards/>
   </>
   );
 }
