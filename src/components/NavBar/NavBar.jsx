@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
-
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   return (
@@ -18,14 +18,24 @@ function NavBar() {
           height="30"
           className="d-inline-block align-top, m-2"
           />
+          <Link exact to='/'>
           <Navbar.Brand href="#home">
           A S T R A S H O P
           </Navbar.Brand>
+          </Link>
           <Nav className="me-auto">
-            <Nav.Link href="#Cervezas">Cervezas</Nav.Link>
+          <Link exact to='/categoria/Whisky'>
+            <Nav.Link href="#Cervezas">Whisky</Nav.Link>
+          </Link>
+          <Link exact to='/categoria/Vinos'>
             <Nav.Link href="#Vinos">Vinos</Nav.Link>
+          </Link>
+          <Link exact to='/categoria/Destilados'>
             <Nav.Link href="#Destilados">Destilados</Nav.Link>
+          </Link>
+          <Link exact to='/categoria/Algo-mas'>
             <Nav.Link href="#AlgoMas">Algo mas...</Nav.Link>
+          </Link>
           </Nav>
             <Form className="d-flex">
             <FormControl

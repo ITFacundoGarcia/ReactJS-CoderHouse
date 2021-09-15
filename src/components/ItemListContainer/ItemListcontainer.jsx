@@ -1,13 +1,13 @@
 import React from 'react'
-import Button from "react-bootstrap/Button"
-import ItemCount from '../ItemCount/ItemCount'
 import { useState, useEffect } from 'react'
 import { getFetch } from '../utils/mock'
 import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
 
 const ItemListcontainer = ({saludo}) => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
+    const { idCategoria } = useParams()
 
     useEffect (() => {
         getFetch
@@ -17,6 +17,9 @@ const ItemListcontainer = ({saludo}) => {
         .catch(error => console.log(error))
         .finally(()=> setLoading(false))
     }, [])
+
+
+    console.log(idCategoria)
 
     return (
         <div>

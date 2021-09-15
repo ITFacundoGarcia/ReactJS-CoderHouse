@@ -15,3 +15,13 @@ const productos = [
             rej('error 404')
         }
     })
+
+
+const producto = { id: "1", nombre: "Whisky JW", img:'https://cdn.shopify.com/s/files/1/0408/4144/5537/products/42672_1200_1_400x.jpg?v=1625152736', volumen: '1000', categoria: "Whisky" , precio: 2000 }
+
+    export const getItem = new Promise((resolve)=> {
+
+        setTimeout(()=>{
+        resolve(producto)
+        }, 2000)
+    })

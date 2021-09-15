@@ -41,3 +41,11 @@ body {
   background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-madera-textured-oscuro-grunge-superficie-vieja-textura-madera-marron_7182-333.jpg?size=626&ext=jpg);
   background-size: cover;
 }
+
+.card {
+  display: inline-block;
+  margin: 0 auto; 
+  float: none;
+  margin-bottom: 10px;
+  max-width: 20%
+}

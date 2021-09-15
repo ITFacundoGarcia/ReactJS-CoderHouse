@@ -2,6 +2,7 @@ import React from 'react'
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
 const Item = ({producto}) => {
     const onAdd = (cant)=> {
@@ -10,10 +11,9 @@ const Item = ({producto}) => {
 
     return (
         <div>
-            <div key={producto.id} >
-            <ul style={{display: "flex"}}>
+            <div className="" key={producto.id} >
             <li className="p-2">
-                    <Card style={{backgroundColor:"Grey", width: '18rem' }}>
+                    <Card style={{backgroundColor:"Grey", width: '18em' }}>
                         <Card.Img variant="top" src={producto.img} />
                         <Card.Body className="text-center">
                             <Card.Title>{producto.nombre}</Card.Title>
@@ -22,12 +22,13 @@ const Item = ({producto}) => {
                                 Volumen: {producto.volumen}cm3<hr/>
                                 precio: ${producto.precio}<hr/>
                             </Card.Text>
-                            <Button variant="dark" onClick=''>Más detalles</Button><hr/>
+                            <Link to={`/detalle/${producto.id}`}>
+                            <   Button variant="dark" onClick=''>Más detalles</Button><hr/>
+                            </Link>
                             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                         </Card.Body>
                     </Card>
             </li>
-            </ul>
             </div>
         </div>
     )
